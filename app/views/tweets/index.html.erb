@@ -1,0 +1,24 @@
+
+<%= flash[:notice] %>
+
+<% @tweets.each do |t| %>
+<p>
+<p> 
+<%= ((Time.current) - (t.tdate)).div(60).to_s %>   
+<%= "分前に投稿"%>
+</p>
+<%= t.message %>
+<%= link_to '削除', "/tweets/#{t.id}", method: :delete %>
+<%= link_to '表示', "/tweets/#{t.id}" %>
+<%= link_to '編集', "/tweets/#{t.id}/edit" %>
+</p>
+
+<% end %>
+
+
+
+
+
+
+
+<p><%= link_to '投稿' ,'/tweets/new' %></p>
