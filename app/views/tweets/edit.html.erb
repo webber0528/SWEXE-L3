@@ -7,8 +7,8 @@
 </ul>
 <% end %>
 
-<%= form_for @tweets , url: {action: :update} do |f| %>
-<%= f.label :message, 'メッセージ' %>
+<%= form_for @tweets , tdate: {action: :update} do |f| %>
+<%= f.label :message, 'メッセージ:' %>
 <%= f.text_field :message %>
 <%= f.submit '更新' %>
 <% end %>

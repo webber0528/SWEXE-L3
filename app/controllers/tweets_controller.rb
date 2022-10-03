@@ -12,7 +12,6 @@ class TweetsController < ApplicationController
   def create
     
     @tweets =  Tweet.new(message: params[:tweet][:message], tdate: Time.current)
-
     if @tweets.save
       flash[:notice] = '1レコード追加しました'
       redirect_to '/'
@@ -47,5 +46,7 @@ class TweetsController < ApplicationController
       render 'edit'
     end
   end
+  
+
   
 end

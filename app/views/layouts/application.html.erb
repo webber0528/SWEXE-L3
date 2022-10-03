@@ -7,9 +7,35 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  
+  <div id="container">
+    
+    　 <div id="header">
+        <%= render "header" %>
+       </div>
+      
+      <div id ="main">
+        
+       
+      　<div id="sidebar">
+          <%= render "sidebar" %>
+        </div>
+      
+      　<div id ="content">
+      　  
+        　<div id ="contents">
+            <%= yield %>
+          </div>
+          
+        </div>
 
-  <body>
-    <%= yield %>
-  </body>
+      </div>
+      
+      <div id="footer">
+        <%= render "footer" %>
+      </div>
+      
+  </div>
+</body>
+
 </html>
