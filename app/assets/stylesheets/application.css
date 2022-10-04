@@ -78,9 +78,12 @@ position: fixed;
 #sidebar nav ul li a:hover{
  color: #000000;
 }
-#contents{
-
- text-align: center
-
+#content{
+ text-align: center;
 }
 
+
+#footer p{
+ text-align: center;
+  height: auto;
+}
